@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+<ul class="flex-container">
+    <li class="flex-item">
+        <form method='POST' action='/search'>
+        <table>
+        <p>Please use this form to submit a search requiest</p>
+        <tr> <td>Phrase:</td><td><input name='phrase' type='TEXT' width='60'></td></tr>
+        <tr><td>Letters:</td><td><input name='letters' type='TEXT' ></td></tr>
+        </table>
+        <p>when you're ready, clikc this button:</p>
+        <p><input value='do it!' type='SUBMIT'></p>
+        </form>
+    </li>
+    <li class="flex-item">
+        <form method='POST' action='/search'>
+        <table>
+        <p>Please use this form to submit a search requiest</p>
+        <tr> <td>Phrase:</td><td><input name='phrase' type='TEXT' width='60'></td></tr>
+        <tr><td>Letters:</td><td><input name='letters' type='TEXT' ></td></tr>
+        </table>
+        <p>when you're ready, clikc this button:</p>
+        <p><input value='do it!' type='SUBMIT'></p>
+        </form>
+    </li>
+    <li class="flex-item">3</li>
+    <li class="flex-item">4</li>
+    <li class="flex-item">5</li>
+    <li class="flex-item">6</li>
+  </ul>
+<form method='POST' action='/search'>
+<table>
+<p>Please use this form to submit a search requiest</p>
+<tr> <td>Phrase:</td><td><input name='phrase' type='TEXT' width='60'></td></tr>
+<tr><td>Letters:</td><td><input name='letters' type='TEXT' ></td></tr>
+</table>
+<p>when you're ready, clikc this button:</p>
+<p><input value='do it!' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
