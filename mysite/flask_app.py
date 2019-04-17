@@ -14,13 +14,13 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/entry')
 def entry_page() -> 'html':
-    return render_template('entry.html', the_title='welcome to the SEARCH YO!!')
+    return render_template('entry.html', the_title='Are your letters in that Phrase?')
 
 @app.route('/search', methods=['POST'])
 def do_seach() -> str:
     phrase = request.form['phrase']
     letters = request.form['letters']
-    title ='HERE ARE THOSE RESULTS'
+    title ='Here are those results'
     results = str (search4letters(phrase, letters))
     return render_template('results.html', the_title=title, the_phrase=phrase, the_letters=letters, the_results=results,)
 

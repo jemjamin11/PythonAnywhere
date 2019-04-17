@@ -1,17 +1,21 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
-<h2>{{ the_title }}</h2>
-
-<p>You submitted the following data:</p>
-
-<table>
-<tr> <td>Phrase:</td><td>>{{ the_phrase }}></td></tr>
-<tr><td>Letters:</td><td>>{{ the_letters }}</td></tr>
-</table>
-
-<p>when "{{ the_phrase }}" is search for "{{ the_letters }}", the following results are returned:</p>
+<div class="wrapper">
+    <header class="header"><h2>{{ the_title }}</h2></header>
+    <article class="main">
+      <p>
+        <table>
+        <tr> <td>Phrase:</td><td>{{ the_phrase }}</td></tr>
+        <tr><td>Letters:</td><td>{{ the_letters }}</td></tr>
+        <p>when "{{ the_phrase }}" is search for "{{ the_letters }}", the following results are returned:</p>
 <h3>{{ the_results }}</h3>
+        </table>
+    </p>  
+    </article>
+    <aside class="aside aside-1"></aside>
+    <aside class="aside aside-2"></aside>
+    <footer class="footer"></footer>
+  </div>
 
 {% endblock %}
