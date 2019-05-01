@@ -1,6 +1,4 @@
 
-import numpy as np
-import cv2 as cv2
 from flask import Flask, render_template, request
 
 
@@ -15,6 +13,11 @@ app = Flask(__name__)
 @app.route('/entry')
 def entry_page() -> 'html':
     return render_template('entry.html', the_title='Are your letters in that Phrase?')
+
+
+@app.route('/hangman')
+def hangman_page() -> 'html':
+    return render_template('hangman.html', the_title='Lets Play Hangman!!')
 
 @app.route('/search', methods=['POST'])
 def do_seach() -> str:
